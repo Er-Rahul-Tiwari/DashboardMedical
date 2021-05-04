@@ -1,0 +1,62 @@
+.btn{
+    padding: 1.2rem 6rem;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: inherit;
+    border: none;
+    font-family: inherit;
+    outline: none;
+    @extend %border__radius-08;
+    text-transform: capitalize;
+    font-weight: $weight-700;
+    background-color: $color-azure-blue;
+    color: $color-white;
+
+    @media only screen and (max-width: $bp-small){
+        padding: 1.2rem 2rem;
+    }
+    &:hover{
+        background-color: $color-azure-blue-hover;
+    }
+}
+
+// Button with Svg Icon
+.saveBtn{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    grid-column-gap: 1rem;
+    align-items: center;
+    justify-self: start;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: $weight-700;
+    padding: 1.2rem 3rem;
+    @extend %border__radius-08;
+    border:none;
+    outline: none;
+    background-color: $color-f4;
+    color: $color-c8;
+    cursor: pointer;
+    
+    &--active{}
+    &--inactive{}
+
+    &__svg{
+        width: 1.8rem;
+    }
+}
+
+.addBtn{
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    font-family: inherit;
+    color: $color-azure-blue;
+    padding: 1rem;
+    background-color: $color-white;
+    font-size: $font-16;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-weight: $weight-700;
+}

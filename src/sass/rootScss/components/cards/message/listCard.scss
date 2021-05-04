@@ -1,0 +1,62 @@
+
+.listCard {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1.5rem;
+    padding: 2rem 3rem;
+    background-color: $color-white;
+
+    &:hover{
+        background-color: $color-f8;
+    }
+
+    &--active {
+        background-color: $color-f8;
+    }
+    &__wrap-1 {
+        word-break: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    &__wrap-2 {
+        word-break: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    &__story {
+        grid-row: 1/3;
+        display: grid;
+        align-content: start;
+        justify-items: center;
+    }
+    &__svgCircle{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        width: 3.5rem;
+        height: 3.4rem;
+        @extend %radius--50;
+        background: $color-white;
+    }
+    &__img {
+        width: 3.5rem;
+        height: 3.4rem;
+        @extend %radius--50;
+    }
+    &--subTop {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        grid-column-gap: 0.6rem;
+    }
+    &--sub {
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        grid-column-gap: 0.6rem;
+    }
+}

@@ -1,0 +1,17 @@
+.remainingCreditsCard{
+    
+    &__box{
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        grid-column-gap: 2rem;
+
+        align-items: center;
+    }
+    &__svg{
+        fill: $color-c8;
+        width: 2.4rem;
+    }
+    &__img{
+        width: 3.6rem;
+    }
+}

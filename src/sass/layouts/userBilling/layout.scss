@@ -1,0 +1,19 @@
+.billing{
+
+    &__history{
+        grid-column: center-start / col-start 5;
+
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start / full-end;
+        }
+    }
+    &__cardContainer{
+        grid-column: col-start 5 / center-end;
+        margin-left: 2rem;
+
+        @media only screen and (max-width: $bp-large){
+            grid-column: full-start / full-end;
+            margin-left: 0;
+        }
+    }
+}

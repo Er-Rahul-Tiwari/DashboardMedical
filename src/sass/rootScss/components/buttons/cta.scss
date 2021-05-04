@@ -1,0 +1,136 @@
+// Default Button with Svg Icon
+.cta {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 1rem;
+    align-items: center;
+    justify-self: start;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: $weight-700;
+    padding: 1.2rem 3rem;
+    @extend %border__radius-08;
+    border: none;
+    outline: none;
+    background-color: $color-f4;
+    color: $color-c8;
+    cursor: pointer;
+
+    &--active {
+        background-color: $color-azure-blue-hover;
+        color: $color-white;
+
+        svg {
+            fill: $color-white;
+        }
+    }
+    &--inactive {
+        background-color: $color-azure-blue-hover;
+        color: $color-white;
+
+        svg {
+            fill: $color-white;
+        }
+    }
+
+    &__svg {
+        width: 1.8rem;
+        fill: $color-c8;
+    }
+
+    &:hover {
+        background-color: $color-azure-blue;
+        color: $color-white;
+    }
+    &:hover svg,
+    &:active svg,
+    &:focus svg {
+        fill: $color-white;
+    }
+    &:active,
+    &:focus {
+        background-color: $color-azure-blue-hover;
+        color: $color-white;
+    }
+}
+
+// Active Button with Svg Icon
+.cta {
+    &__primary {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-column-gap: 1rem;
+        align-items: center;
+        justify-self: start;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: $weight-700;
+        padding: 1.2rem 3rem;
+        @extend %border__radius-08;
+        border: none;
+        outline: none;
+        background-color: $color-azure-blue;
+        color: $color-white;
+        cursor: pointer;
+
+        &:active,
+        &:focus {
+            background-color: $color-azure-blue-hover;
+        }
+        svg {
+            fill: $color-white;
+            width: 1.8rem;
+        }
+    }
+}
+// Secondary Button with Svg Icon
+.cta {
+    &__secondary {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-column-gap: 1rem;
+        align-items: center;
+        justify-self: start;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: $weight-700;
+        padding: 1.2rem 3rem;
+        @extend %border__radius-08;
+        outline: none;
+        border: 2px solid $color-azure-blue-hover;
+        color: $color-azure-blue;
+        cursor: pointer;
+        background: $color-white;
+
+        &:hover {
+            border: 2px solid $color-azure-blue-hover;
+        }
+        svg {
+            fill: $color-azure-blue-hover;
+            width: 1.8rem;
+        }
+    }
+}
+// Inactive Button with Svg Icon
+.cta {
+    &__inactive {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-column-gap: 1rem;
+        align-items: center;
+        justify-self: start;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: $weight-700;
+        padding: 1.2rem 3rem;
+        @extend %border__radius-08;
+        border: none;
+        outline: none;
+        background-color: $color-f4;
+        color: $color-c8;
+    }
+    svg {
+        fill: $color-c8;
+        width: 1.8rem;
+    }
+}

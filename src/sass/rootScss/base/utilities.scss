@@ -1,0 +1,263 @@
+// UTILITIES
+.mb-small {
+  margin-bottom: 1rem !important;
+}
+.mb-5 {
+  margin-bottom: 0.5rem !important;
+}
+.mt-5 {
+  margin-top: 0.5rem !important;
+}
+.mr-5 {
+  margin-right: 0.5rem !important;
+}
+.mt-small {
+  margin-top: 1rem !important;
+}
+.mt-15 {
+  margin-top: 1.5rem !important;
+}
+.mr-small {
+  margin-right: 1rem !important;
+}
+.ml-small {
+  margin-left: 1rem !important;
+}
+.ml-medium{
+  margin-left: 2rem !important;
+}
+.ml-3{
+  margin-left: 3rem !important;
+}
+.mb-medium {
+  margin-bottom: 2rem !important;
+}
+.mt-medium {
+  margin-top: 2rem !important;
+}
+.mb-3 {
+  margin-bottom: 3rem !important;
+}
+.mb-large {
+  margin-bottom: 4rem !important;
+}
+.mt-large {
+  margin-top: 4rem !important;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+.p0 {
+  margin-bottom: 0;
+}
+
+// self item grid alignment
+.j-self-end {
+  justify-self: end;
+}
+
+// HEADING
+%heading {
+  color: $color-5f;
+}
+.heading-largear {
+  @extend %heading;
+  font-size: $font-45;
+}
+.heading-large {
+  @extend %heading;
+  font-size: $font-40;
+}
+.heading-1 {
+  color: $color-999;
+  font-size: $font-30;
+  font-weight: 300;
+}
+.heading-2 {
+  @extend %heading;
+  font-size: $font-24;
+}
+.heading-3 {
+  @extend %heading;
+  font-size: $font-22;
+}
+.heading-4 {
+  @extend %heading;
+  font-size: $font-18;
+}
+
+// PARA
+%para {
+  color: $color-777;
+  // text-transform: capitalize;
+  font-weight: $weight-600;
+}
+.para {
+  @extend %para;
+}
+
+// BORDER Radius
+%radius--50 {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+%border__radius-08 {
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+
+// Shadow box
+%shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+// COLOR
+.black {
+  color: $color-222 !important;
+}
+.azure-blue {
+  color: $color-azure-blue !important;
+}
+.pastel-red {
+  color: $color-pastel-red !important;
+}
+.pastel-orange {
+  color: $color-pastel-orange !important;
+}
+.color-99 {
+  color: $color-999 !important;
+}
+.color-5f {
+  color: $color-5f !important;
+}
+.color-c8 {
+  color: $color-c8 !important;
+}
+.color-pastel-green {
+  color: $color-pastel-green !important;
+}
+
+// font Weight
+.weight-700 {
+  font-weight: $weight-700 !important;
+}
+.weight-600 {
+  font-weight: $weight-600 !important;
+}
+.weight-500 {
+  font-weight: $weight-500 !important;
+}
+.weight-400 {
+  font-weight: $weight-400 !important;
+}
+
+// font size
+.font-12 {
+  font-size: $font-12 !important;
+}
+.font-14 {
+  font-size: $font-14 !important;
+}
+.font-16 {
+  font-size: $font-16 !important;
+}
+.font-18 {
+  font-size: $font-18 !important;
+}
+
+// text Case
+.upper {
+  text-transform: uppercase !important;
+}
+.lower {
+  text-transform: lowercase !important;
+}
+.cap {
+  text-transform: capitalize !important;
+}
+
+// underline
+
+.underline {
+  border-bottom: 2px solid $color-f4;
+}
+
+// Center
+.center {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+// link ancer tag
+.centerVertical {
+  display: grid;
+  align-items: center;
+}
+
+// visually
+.visually-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// position
+.position-absolute {
+  position: absolute;
+}
+
+// Link Style
+.link {
+  text-decoration-style: none;
+  -moz-text-decoration-style: none;
+  text-decoration: none;
+}
+
+// Container Layout
+.box {
+  background-color: $color-white;
+  @extend %border__radius-08;
+  @extend %shadow;
+  padding: 3rem;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 1rem;
+  }
+}
+
+// Vertical 3-dots background
+.dot__box {
+  background-color: $color-white;
+  @extend %border__radius-08;
+  @extend %shadow;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+// Clip-wrap text line
+.wrap {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  &-1 {
+    -webkit-line-clamp: 1;
+  }
+  &-2 {
+    -webkit-line-clamp: 2;
+  }
+  &-3 {
+    -webkit-line-clamp: 3;
+  }
+}

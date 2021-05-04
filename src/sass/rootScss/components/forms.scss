@@ -1,0 +1,119 @@
+.forms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+.form {
+    &__sub-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        color: $color-c8;
+        border: 2px solid $color-c8;
+        border-radius: 0.8rem;
+        -webkit-border-radius: 0.8rem;
+        -moz-border-radius: 0.8rem;
+        -ms-border-radius: 0.8rem;
+        -o-border-radius: 0.8rem;
+        font-family: inherit;
+
+        &:focus {
+            outline: none;
+        }
+        &::-webkit-input-placeholder {
+            color: $color-c8;
+            font-weight: $weight-500;
+            font-size: $font-16;
+        }
+        &[type="text"],
+        &[type="email"],
+        &[type="number"],
+        select,
+        textarea {
+            color: $color-5f;
+            font-weight: $weight-700;
+        }
+    }
+    &__label {
+        font-size: $font-12;
+        text-transform: uppercase;
+        color: $color-c8;
+        font-weight: $weight-700;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        align-items: center;
+        grid-gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    &__point {
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: $color-laser-red;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    &__textarea {
+        grid-column: 1/-1;
+    }
+    &__searchBox {
+    }
+    &__searchSvg {
+        position: absolute;
+        z-index: 3;
+        padding: 1.3rem;
+    }
+    &__search {
+        position: relative;
+        padding-left: 4rem;
+        z-index: 1;
+    }
+    &__eye {
+        float: right;
+        margin-right: 1rem;
+        cursor: pointer;
+        transform: translateY(-3.5rem);
+        -webkit-transform: translateY(-3.5rem);
+        -moz-transform: translateY(-3.5rem);
+        -ms-transform: translateY(-3.5rem);
+        -o-transform: translateY(-3.5rem);
+    }
+    &__error {
+        color: $color-laser-red;
+        font-size: $font-12;
+        text-transform: uppercase;
+    }
+}
+
+.message {
+    &__group {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__input[type="text"]:focus {
+        outline: none;
+    }
+
+    &__input[type="text"]:focus ~ &__label {
+        color: $color-azure-blue;
+    }
+    &__input:focus-within {
+        border: 2px solid $color-azure-blue;
+    }
+}

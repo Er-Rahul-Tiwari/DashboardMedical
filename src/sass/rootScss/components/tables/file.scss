@@ -1,0 +1,58 @@
+.file{
+    &__nav{
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-auto-flow: column;
+        grid-column-gap: 2rem;
+    }
+    &__leftNav{
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-column-gap: 3rem;
+        justify-content: start;
+    }
+    &__rightNav{
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-column-gap: 3rem;
+        justify-content: end;
+
+        &-svg{
+            width: 2rem;
+        }
+    }
+    &__img{
+        width: 5rem;
+    }
+    &__position{
+        position: relative;
+    }
+    &__white{
+        background-color: $color-white;
+        width: 2.6rem;
+        height: 2.6rem;
+        position: absolute;
+        right: -1rem;
+        top: -.5rem;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        @extend %border__radius-08;
+    }
+    &__blue{
+        background-color: $color-azure-blue;
+        width: 2.2rem;
+        height: 2.2rem;
+        @extend %border__radius-08;
+        z-index: 2;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    &__svgCopy{
+        z-index: 3;
+    }
+}

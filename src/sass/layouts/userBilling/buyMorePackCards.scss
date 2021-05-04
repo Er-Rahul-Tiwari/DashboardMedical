@@ -1,0 +1,20 @@
+.buyMorePackCards {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+}
+.buyMorePackCard {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: $color-f8;
+  @extend %border__radius-08;
+  padding: 2rem;
+
+  &__item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+  }
+}

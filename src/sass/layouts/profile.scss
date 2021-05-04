@@ -1,0 +1,70 @@
+
+.profile{
+    &__cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+            grid-gap: 2rem;
+            
+            @media only screen and (max-width: $bp-large){
+                grid-template-columns: repeat(auto-fit,minmax(24rem,1fr));
+            }
+    }
+    &__story{
+        grid-column: center-start/col-end 3;
+        display: grid;
+        grid-gap: 2rem;
+        align-content: start;
+        @media only screen and (max-width:$bp-medium){
+            grid-column: full-start/full-end;
+            margin: 2rem 0;
+        }
+    }
+    &__details{
+        grid-column: col-start 4/ center-end;
+        padding: 0 0 5rem 2rem;
+        display: grid;
+        grid-gap: 2rem;
+        @media only screen and (max-width:$bp-large){
+            grid-column: full-start/full-end;
+            padding: 0 0 3rem 0;
+        }
+    }
+    &__box{
+        padding: 3rem;
+        @extend %shadow;
+        @extend %border__radius-08;
+        background-color: $color-white;
+        @media only screen and (max-width:$bp-large){
+            padding: 2rem;
+        }
+    }
+    &__form{
+        display: grid;
+        grid-row-gap: 3rem;
+    }
+    &__grid-3{
+        display: grid;
+        grid-template-columns: max-content repeat(2,1fr);
+        grid-column-gap: 2rem;
+        @media only screen and (max-width: $bp-large){
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+        }
+    }
+    &__grid-2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 2rem;
+        @media only screen and (max-width: $bp-large){
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;}
+    }
+    &__saveBtn{
+        width: 2rem;
+    }
+    &__delete-box{
+        display: grid;
+        align-items: end;
+        justify-items: end;
+    }
+}

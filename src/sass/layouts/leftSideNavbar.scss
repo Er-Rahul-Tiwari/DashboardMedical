@@ -1,0 +1,75 @@
+.leftNav {
+    background-color: $color-white;
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: min-content repeat(2, 1fr);
+    justify-items: center;
+    grid-row-gap: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 1rem 0;
+    box-shadow: 0 0 1rem 0 rgba($color-black, 0.05);
+
+    @media only screen and (max-width: $bp-large) {
+        display: none;
+    }
+
+    &__logo {
+        object-fit: contain;
+        margin-bottom: 1rem;
+        display: grid;
+        align-self: start;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__box {
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        grid-row-gap: 1rem;
+        align-items: start;
+    }
+    &__item {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        padding: 1rem;
+        @extend %border__radius-08;
+        &:hover {
+            background-color: $color-sky-blue-light;
+            cursor: pointer;
+        }
+    }
+    &__active {
+        background-color: $color-sky-blue-light;
+        svg {
+            fill: $color-azure-blue;
+        }
+    }
+    &__upload {
+        background-color: $color-azure-blue;
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        @extend %border__radius-08;
+        padding: 1rem;
+        &:hover {
+            background-color: $color-azure-blue-hover;
+            cursor: pointer;
+        }
+    }
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $color-c8;
+        object-fit: contain;
+    }
+
+    &__bottom {
+        display: grid;
+        align-self: end;
+    }
+}

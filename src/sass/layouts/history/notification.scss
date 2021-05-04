@@ -1,0 +1,49 @@
+.historyNotification {
+  grid-column: center-start / center-end;
+  margin-bottom: 3rem;
+
+  background-color: $color-white;
+  @extend %border__radius-08;
+  @extend %shadow;
+  overflow: hidden;
+  padding: 2rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+  }
+}
+
+.historyNotificationCards {
+}
+
+.historyNotificationCard {
+  display: grid;
+  grid-template-columns: min-content 1fr repeat(2, max-content);
+  grid-column-gap: 2rem;
+  align-items: center;
+  grid-row-gap: 1rem;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+
+  &:nth-child(even) {
+    background-color: $color-f8;
+  }
+
+  &__end {
+    display: grid;
+    justify-items: end;
+    align-items: start;
+    position: relative;
+  }
+  &__point {
+    width: 1rem;
+    height: 1rem;
+    @extend%radius--50;
+    background-color: $color-laser-red;
+    transform: translateY(-0.2rem);
+    -webkit-transform: translateY(-0.2rem);
+    -moz-transform: translateY(-0.2rem);
+    -ms-transform: translateY(-0.2rem);
+    -o-transform: translateY(-0.2rem);
+    position: absolute;
+  }
+}

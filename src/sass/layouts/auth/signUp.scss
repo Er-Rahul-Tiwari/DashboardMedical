@@ -1,0 +1,120 @@
+.authContainer {
+    // grid-column: sidebar-start / full-end;
+    display: grid;
+    grid-template-rows: repeat(3,min-content);
+    grid-template-columns:
+        [full-start] minmax(6rem, 1fr) [center-start]
+        repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // z-index: 9999;
+    background-color: $color-white;
+
+    @media only screen and (max-width: $bp-small){
+        padding: 0 1.5rem;
+    }
+}
+
+.signUp1 {
+    grid-column: col-start 4 / col-end 5;
+    padding: 4rem 0;
+    // left: 0;
+    // top: 0;
+    // z-index: 9999;
+    display: grid;
+    grid-row-gap: 3rem;
+    background-color: $color-white;
+    justify-items: center;
+    @media only screen and (max-width: $bp-small) {
+        grid-column: full-start/ full-end;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        width: 100%;
+    }
+    &__logo {
+        grid-column: 1/-1;
+        width: 15rem;
+    }
+    &__indications {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+    }
+    &__indication {
+        height: 0.4rem;
+        background-color: $color-pastel-orange;
+    }
+    &__grid-2 {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+    }
+    &__group {
+        padding: 2rem 3rem;
+        @extend %border__radius-08;
+        position: relative;
+
+        &--active {
+            background-color: $color-sky-blue-light;
+        }
+        &--inactive {
+            background-color: $color-fa;
+        }
+    }
+    &__grid {
+        display: grid;
+    }
+    &__checkboxNone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+.signUp {
+    grid-column: col-start 2 / col-end 7;
+    padding: 4rem 0;
+    // left: 0;
+    // top: 0;
+    z-index: 9999;
+    display: grid;
+    grid-row-gap: 3rem;
+    background-color: $color-white;
+    justify-items: center;
+    @media only screen and (max-width: $bp-small) {
+        grid-column: full-start/ full-end;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+    }
+    &__logo {
+        grid-column: 1/-1;
+        width: 15rem;
+    }
+    &__box-btn {
+        display: grid;
+        grid-column: 1/-1;
+        justify-items: end;
+        @media only screen and (max-width: $bp-small) {
+            justify-items: normal;
+        }
+    }
+    &__none {
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+}

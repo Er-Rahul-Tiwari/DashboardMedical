@@ -1,0 +1,37 @@
+.notification{
+    background-color: $color-white;
+    padding: 2rem;
+    width: 45rem;
+    @extend %border__radius-08;
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100vw;
+        padding: 1rem;
+    }
+
+    // &__scroll {
+    //     overflow-y: scroll;
+    //     height: 70vh;
+    //     white-space: nowrap;
+    //     background-color: $color-white;
+    // }
+    &__layout{
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        grid-column-gap: 1.2rem;
+        grid-row-gap: 1.6rem;
+        @media only screen and (max-width: $bp-smallest) {
+            grid-column-gap: .4rem;
+        }
+    }
+    &__content{
+        grid-column: 2/3;
+    }
+    &__icon{
+        width: 2rem;
+        fill:$color-c8;
+        cursor: pointer;
+        &:hover{
+            fill: $color-azure-blue-hover;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.chats {
+    padding-right: 2rem;
+
+    align-content: end;
+
+    height: 60vh;
+    overflow-y: scroll;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.chat {
+    &__other {
+        display: grid;
+        align-content: start;
+        justify-items: start;
+        margin: 1.5rem 0;
+        grid-row-gap: 1.5rem;
+
+        &--message {
+            width: 48%;
+            padding: 1.5rem;
+            background-color: $color-white;
+            color: $color-999;
+            @extend %border__radius-08;
+            @extend %shadow;
+        }
+        img {
+            width: 9rem !important;
+        }
+    }
+    &__me {
+        display: grid;
+        align-content: end;
+        justify-items: end;
+        grid-row-gap: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        &--message {
+            width: 48%;
+            padding: 1.5rem;
+            background-color: $color-azure-blue;
+            color: $color-white;
+            @extend %border__radius-08;
+            @extend %shadow;
+        }
+
+        img {
+            width: 9rem !important;
+        }
+    }
+    &__footer {
+        display: grid;
+        grid-template-columns: min-content 1fr min-content max-content;
+        grid-column-gap: 2rem;
+        padding: 1rem;
+        margin: 1rem 2.5rem 1rem 0;
+        background-color: $color-white;
+        @extend %border__radius-08;
+        @extend %shadow;
+    }
+    &__input {
+        border: none;
+        outline: none;
+    }
+}

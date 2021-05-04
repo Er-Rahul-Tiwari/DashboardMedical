@@ -1,0 +1,67 @@
+.tables {
+}
+
+.table {
+    &__header {
+        font-size: $font-12;
+        color: $color-c8;
+        font-weight: $weight-700;
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: max-content;
+    }
+    &__box {
+        display: grid;
+        grid-template-columns: min-content minmax(20rem,1fr);
+        grid-column-gap: 2.6rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column-gap: 1rem;
+        }
+    }
+    &__iconBox {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        width: 4.6rem;
+        height: 4.6rem;
+        @extend %radius--50;
+        background-color: $color-sky-blue-light;
+    }
+    &__img {
+        width: 4.6rem;
+        height: 4.6rem;
+        @extend %radius--50;
+    }
+    &__svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        @extend %radius--50;
+    }
+    &__crBox {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        grid-column-gap: 0.5rem;
+        align-content: start;
+        font-weight: $weight-500;
+        font-size: $font-14;
+    }
+}
+
+.ant-table-column-sorter{
+    margin-top: 0 !important;
+    margin-left: .5rem !important;
+    color: $color-c8 !important;
+}
+.ant-pagination-item-link{
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+}
+.ant-pagination-item-active,
+.ant-pagination-item,
+.ant-pagination-item-active * a{
+    border: none !important;
+}

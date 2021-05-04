@@ -1,0 +1,68 @@
+// FONT WEIGHT VARIABLE
+$weight-300: 300;
+$weight-400: 400;
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+
+// FONT SIZE
+$font-12: 1.2rem;
+$font-14: 1.4rem;
+$font-16: 1.6rem;
+$font-18: 1.8rem;
+$font-20: 2rem;
+$font-22: 2.2rem;
+$font-24: 2.4rem;
+$font-30: 3rem;
+$font-40: 4rem;
+$font-45: 4.5rem;
+
+// COLOR
+$color-white: #fff;
+$color-black: #000;
+$color-green: rgba(45, 122, 45, 0.87);
+$color-green-light: rgba(45, 122, 45, 0.7);
+$color-222: #222;
+$color-555: #555;
+$color-5f: #5f5f5f;
+$color-777: #777;
+$color-999: #999;
+$color-aaa: #aaa;
+$color-eee: #eee;
+$color-e8: #e8e8e8;
+$color-fa: #fafafa;
+$color-f8: #f8f8f8;
+$color-f4: #f4f4f4;
+$color-c8: #c8c8c8;
+$color-azure-blue-hover: #077eb5;
+$color-azure-blue: #0095da;
+$color-sky-blue: #8ed8f8;
+$color-sky-blue-light: #edf6fa;
+$color-dark-grey: #5f5f5f;
+$color-middle-grey: #999999;
+$color-ultra-light-white: #f8f8f8;
+$color-inactive: #c8c8c8;
+$color-soft-white: #f4f4f4;
+$color-pure-white: #ffffff;
+$color-pastel-orange: #f9bd4a;
+$color-pastel-orange-light: #ffde61;
+$color-pastel-red: #f9694a;
+$color-laser-red: #ec1c24;
+$color-pastel-green: #6fcf97;
+
+// FONT FAMILY
+$font-primary: "Quicksand", sans-serif;
+
+// BREAK POINT
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+$bp-smallest: 25em;
+
+// HEADING
+%heading {
+    font-weight: 700;
+    line-height: 1;
+    text-transform: capitalize;
+}

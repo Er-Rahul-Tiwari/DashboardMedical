@@ -1,0 +1,30 @@
+.billHistoryCards{
+    background-color: $color-white;
+    @extend %border__radius-08;
+    @extend %shadow;
+    padding: 3rem;
+}
+.billHistoryCard{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+
+    &__underline{
+        grid-column: 1/-1;
+        margin-bottom: 2rem;
+        &:last-child{
+            border-bottom: 2px solid transparent;
+        }
+    }
+    &__box{
+        grid-column: 1/-1;
+        margin: 3rem 0;
+    }
+    &__rightBox{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: end;
+        align-items: start;
+    }
+}

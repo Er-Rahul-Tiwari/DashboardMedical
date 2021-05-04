@@ -1,0 +1,37 @@
+.buyMoreCards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+.buyMoreCard{
+    &__tabHeader{
+        display: grid;
+        grid-template-columns: repeat(2,max-content);
+        grid-column-gap: 1rem;
+    }
+    &__tab{
+        border-bottom: 2px solid transparent;
+        font-weight: $weight-700;
+        
+        &--active{
+            border-bottom: 2px solid $color-azure-blue !important;
+            font-weight: $weight-700;
+            color: $color-5f !important;
+        }
+    }
+    &__graph{
+        grid-column: 1/-1;
+    }
+    &__quantity{
+        display: grid;
+        justify-items: end;
+    }
+    &__swapBox{
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-column-gap: 1rem;
+        align-items: center;
+    }
+}

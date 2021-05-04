@@ -1,0 +1,52 @@
+.tables {
+    grid-column: center-start / center-end;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width:$bp-small){
+        grid-column: full-start/ full-end;
+        margin: 2rem 0;
+    }
+}
+.table {
+    @extend %border__radius-08;
+    @extend %shadow;
+    background-color: $color-white;
+    padding: 2rem;
+
+    display: grid;
+    grid-row-gap: 2rem;
+
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 2rem;
+        
+        @media only screen and (max-width:$bp-small){
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 1rem;
+        }
+    }
+    &__rightNav {
+        display: grid;
+        justify-content: end;
+        align-items: center;
+
+        grid-template-columns: repeat(4, max-content);
+        grid-column-gap: 2rem;
+        @media only screen and (max-width:$bp-small){
+            grid-template-columns: repeat(4, min-content);
+            grid-column-gap: 1rem;
+        }
+    }
+    &__icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        object-fit: contain;
+        fill: $color-c8;
+        cursor: pointer;
+
+        &:hover {
+            fill: $color-azure-blue-hover;
+        }
+    }
+}

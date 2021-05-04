@@ -1,0 +1,67 @@
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-gap: 2rem;
+    
+    @media only screen and (max-width: $bp-large){
+        grid-template-columns: repeat(auto-fit,minmax(24rem,1fr));
+    }
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    background-color: $color-white;
+    padding: 3rem;
+    @extend %shadow;
+    @extend %border__radius-08;
+
+    &__icon{
+        width: 4rem;
+        height: 4rem;
+        fill: $color-f4;
+        object-fit: contain;
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    &__data{
+        grid-column: 1/-1;
+        justify-self: center;
+        font-weight: $weight-600;
+    }
+    &__card-box{
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-column-gap: .5rem;
+    }
+    &__arr{
+        justify-self: start;
+    }
+    &__btn{
+        grid-column: 1/-1;
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    &__nestedBox{
+        position: relative;
+        left: -39px;
+        margin-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-small){
+            margin-bottom: 6rem;
+        }
+    }
+    &__nested-1{
+        position: absolute;
+        top: -54px;
+    left: -44px;
+    }
+    &__nested-2{
+        position: absolute;
+        top: -47px;
+    left: -31px;
+    }
+}

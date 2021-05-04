@@ -1,0 +1,16 @@
+.messagesLayout{
+    grid-column: center-start / center-end;
+
+    &__box{
+        @extend %border__radius-08;
+        @extend %shadow;
+        overflow: hidden;
+    }
+
+    &__messageArea{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 2rem;
+        background-color: $color-f8;
+    }
+}

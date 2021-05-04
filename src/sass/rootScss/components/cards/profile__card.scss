@@ -1,0 +1,35 @@
+.profile {
+    &__card {
+        display: grid;
+        grid-row-gap: 3rem;
+        align-items: center;
+        justify-items: center;
+        padding: 4rem 8rem;
+        @extend %shadow;
+        @extend %border__radius-08;
+        background-color: $color-white;
+
+        @media only screen and (max-width:$bp-largest){
+            padding: 1rem;
+        }
+    }
+    &__img {
+        height: 5rem;
+        width: 5rem;
+        @extend %radius--50;
+    }
+    &__item {
+        display: grid;
+        justify-items: center;
+    }
+
+    // sub card
+    &__smallCard {
+        display: grid;
+        padding: 1.5rem;
+        grid-row-gap: 0.5rem;
+        @extend %shadow;
+        @extend %border__radius-08;
+        background-color: $color-white;
+    }
+}
